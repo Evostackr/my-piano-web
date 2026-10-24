@@ -1,0 +1,23 @@
+# My Piano (https://mypiano.app/)
+
+> My Piano is a free, interactive virtual piano web application featuring authentic 88-note acoustic grand piano recordings across 7 full octaves. It runs natively in modern web browsers without installation or plugins.
+
+## Core Capabilities
+- **Playable Keyboard**: 49 white keys (A1 to G7) and 35 black keys (A#1 to G#7) across 7 octaves.
+- **Authentic Acoustics**: 88 individual Vorbis (.ogg) acoustic grand piano samples.
+- **Zero-Latency Polyphony**: Multi-voice chord playback using the Web Audio API.
+- **Input Methods**: Computer keyboard (QWERTY), mouse clicks/glissando, and touchscreen multi-touch.
+- **Navigator**: Mini-piano seekbar for rapid horizontal panning across the 7-octave range.
+- **Octave Selectors**: Dedicated quick-jump pills for Octaves 1 through 7, plus `[` and `]` keyboard shortcuts.
+- **Audio Controls**: Master volume adjustment, one-click mute, and fullscreen performance mode.
+- **Privacy & Security**: Operates completely in the client's browser; no user tracking, no cookies, no account required.
+
+## Keyboard Controls Mapping (Middle Octave 4)
+- **White Keys**: A (C4), S (D4), D (E4), F (F4), G (G4), H (A4), J (B4), K (C5), L (D5), ; (E5), ' (F5)
+- **Black Keys**: W (C#4), E (D#4), T (F#4), Y (G#4), U (A#4), O (C#5), P (D#5)
+- **Octave Shift**: `[` shifts down one octave, `]` shifts up one octave.
+
+## Frequently Asked Questions
+- **Is My Piano free?** Yes, 100% free with no registration, subscriptions, or paywalls.
+- **Does it work on mobile?** Yes, it supports multi-touch on iOS and Android devices.
+- **Does it require installation?** No, it runs entirely in any modern web browser.
