@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My Piano by Evostackr</title>
+    <link>https://my-piano.evostackr.in/</link>
+    <description>Interactive 88-key virtual piano web app with authentic acoustic grand piano notes, QWERTY desktop controls, and zero installation.</description>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 24 Oct 2026 12:00:00 GMT</lastBuildDate>
+    <atom:link href="https://my-piano.evostackr.in/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>My Piano 2.0 Web Edition Released</title>
+      <link>https://my-piano.evostackr.in/#features</link>
+      <guid isPermaLink="true">https://my-piano.evostackr.in/#features</guid>
+      <pubDate>Sat, 24 Oct 2026 12:00:00 GMT</pubDate>
+      <description>Experience the full 88-key acoustic grand piano sound library directly in any web browser with polyphonic Web Audio API synthesis, mini-map seekbar navigation, and touch glissando.</description>
+      <author>support@evostackr.in (Evostackr)</author>
+    </item>
+    <item>
+      <title>Comprehensive Piano Keyboard Guide &amp; Note Intervals</title>
+      <link>https://my-piano.evostackr.in/#piano-guide</link>
+      <guid isPermaLink="true">https://my-piano.evostackr.in/#piano-guide</guid>
+      <pubDate>Sat, 24 Oct 2026 10:00:00 GMT</pubDate>
+      <description>Learn the anatomy of the 88-key piano keyboard: finding Middle C (C4), understanding the 7 natural notes, black accidentals (sharps and flats), and harmonic intervals.</description>
+      <author>support@evostackr.in (Evostackr)</author>
+    </item>
+  </channel>
+</rss>

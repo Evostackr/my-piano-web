@@ -40,6 +40,14 @@
   Cache-Control: public, max-age=86400, must-revalidate
   Content-Type: application/xml; charset=utf-8
 
+/feed.xml
+  Cache-Control: public, max-age=86400, must-revalidate
+  Content-Type: application/rss+xml; charset=utf-8
+
+/opensearch.xml
+  Cache-Control: public, max-age=86400, must-revalidate
+  Content-Type: application/opensearchdescription+xml; charset=utf-8
+
 /llms.txt
   Cache-Control: public, max-age=86400, must-revalidate
   Content-Type: text/plain; charset=utf-8

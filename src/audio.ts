@@ -151,6 +151,15 @@ class PianoAudioEngine {
     });
     this.activeSources.clear();
   }
+
+  public getLatencyMs(): number | null {
+    if (this.ctx) {
+      const base = (this.ctx as unknown as { baseLatency?: number }).baseLatency || 0.005;
+      const output = (this.ctx as unknown as { outputLatency?: number }).outputLatency || 0.005;
+      return Math.round((base + output) * 1000 * 10) / 10;
+    }
+    return null;
+  }
 }
 
 export const audioEngine = new PianoAudioEngine();

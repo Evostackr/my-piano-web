@@ -1,5 +1,8 @@
 import { audioEngine } from './audio';
 import { WHITE_KEYS, BLACK_KEYS, getKeyboardMapping, WhiteKeyData, BlackKeyData } from './pianoData';
+import { optimizationDashboardUI } from './seo/ui/optimizationDashboard';
+import { vitalsObserver } from './seo/vitalsObserver';
+import { engagementBus } from './seo/engagementBus';
 
 // DOM Elements - Piano Interface
 const pianoCardWrapper = document.getElementById('pianoCardWrapper') as HTMLElement;
@@ -179,6 +182,13 @@ function triggerKey(btn: HTMLElement, soundName: string) {
 
   btn.classList.add('active');
   audioEngine.playSound(soundName);
+
+  // Real-time SXO and CRO Telemetry
+  engagementBus.recordKeyPlayed();
+  const latency = audioEngine.getLatencyMs();
+  if (latency !== null) {
+    vitalsObserver.setAudioLatency(latency);
+  }
 }
 
 /**
@@ -295,6 +305,7 @@ function jumpToOctave(octave: number) {
     targetKey.scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
     currentKeyboardOctave = octave;
     updateShortcutLabels();
+    engagementBus.recordOctaveNavigated();
   }
 }
 
@@ -409,6 +420,7 @@ function initToolbar() {
 
   // Fullscreen
   fullscreenBtn.addEventListener('click', () => {
+    engagementBus.recordFullscreenToggle();
     if (!document.fullscreenElement) {
       pianoCardWrapper.requestFullscreen().catch(() => {
         document.documentElement.requestFullscreen().catch(() => {});
@@ -430,6 +442,7 @@ function initToolbar() {
     toggleShortcutsBtn.classList.toggle('active', showKeyShortcuts);
     document.getElementById('siteWrapper')?.classList.toggle('show-shortcuts', showKeyShortcuts);
     updateShortcutLabels();
+    engagementBus.recordShortcutToggle();
   });
 
   // Octave Pills
@@ -443,6 +456,7 @@ function initToolbar() {
   // Help Modal
   helpBtn.addEventListener('click', () => {
     helpModal.classList.add('open');
+    engagementBus.recordHelpViewed();
   });
 
   closeModalBtn.addEventListener('click', () => {
@@ -540,12 +554,22 @@ function initWebsiteInfrastructure() {
 
   // 6. Contact Modal
   if (openContactBtn && contactModal && closeContactBtn) {
-    openContactBtn.addEventListener('click', () => contactModal.classList.add('open'));
+    openContactBtn.addEventListener('click', () => {
+      contactModal.classList.add('open');
+      engagementBus.recordContactClick();
+    });
     closeContactBtn.addEventListener('click', () => contactModal.classList.remove('open'));
     contactModal.addEventListener('click', (e) => {
       if (e.target === contactModal) contactModal.classList.remove('open');
     });
   }
+
+  // Also bind all mailto: links to engagementBus contact record
+  document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+    link.addEventListener('click', () => {
+      engagementBus.recordContactClick();
+    });
+  });
 
   // Escape key closes any open modal
   window.addEventListener('keydown', (e) => {
@@ -581,6 +605,9 @@ function startApp() {
   initToolbar();
   initWebsiteInfrastructure();
   preloadCoreAudio();
+
+  // Initialize SEO, AEO, GEO & AI Search Intelligence Suite
+  optimizationDashboardUI.init();
 
   // Replicate Android exact initial scroll offset:
   // scrollView.post { scrollView.scrollTo((scrollView.getChildAt(0).width * 0.55).toInt(), 0) }
