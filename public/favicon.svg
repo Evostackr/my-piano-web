@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#242424"/>
+      <stop offset="100%" stop-color="#141414"/>
+    </linearGradient>
+    <filter id="keyGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#80ffe5" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Dark App Icon Squircle Background -->
+  <rect x="24" y="24" width="464" height="464" rx="112" fill="url(#bgGrad)" stroke="#383838" stroke-width="12"/>
+
+  <!-- Piano Keyboard White Housing -->
+  <rect x="64" y="84" width="384" height="344" rx="28" fill="#FCFCFC" stroke="#272727" stroke-width="20"/>
+
+  <!-- White Key Separator Lines (5 White Keys) -->
+  <line x1="140.8" y1="94" x2="140.8" y2="418" stroke="#282828" stroke-width="8"/>
+  <line x1="217.6" y1="94" x2="217.6" y2="418" stroke="#282828" stroke-width="8"/>
+  <line x1="294.4" y1="94" x2="294.4" y2="418" stroke="#282828" stroke-width="8"/>
+  <line x1="371.2" y1="94" x2="371.2" y2="418" stroke="#282828" stroke-width="8"/>
+
+  <!-- Black Keys with Signature Mint/Cyan Accent (#80ffe5) -->
+  <!-- C# (centered on line 1) -->
+  <rect x="120" y="94" width="41.6" height="196" rx="16" fill="#80ffe5" stroke="#12a88b" stroke-width="4" filter="url(#keyGlow)"/>
+  <!-- D# (centered on line 2) -->
+  <rect x="196.8" y="94" width="41.6" height="196" rx="16" fill="#80ffe5" stroke="#12a88b" stroke-width="4" filter="url(#keyGlow)"/>
+  <!-- F# (centered on line 4) -->
+  <rect x="350.4" y="94" width="41.6" height="196" rx="16" fill="#80ffe5" stroke="#12a88b" stroke-width="4" filter="url(#keyGlow)"/>
+</svg>
