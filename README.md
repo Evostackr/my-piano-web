@@ -71,11 +71,23 @@ The output bundle is generated inside the `dist/` directory, ready to be served 
 
 ## 🌐 Deploy to Hosting Platforms
 
+### Deploy on Cloudflare Pages (Recommended)
+
+1. Log in to the [Cloudflare Dashboard](https://dash.cloudflare.com/) and go to **Compute (Workers & Pages)** > **Create an application** > **Pages**.
+2. Select **Connect to Git** and choose the `my-piano-web` repository.
+3. Configure the build settings:
+   - **Framework preset**: `Vite`
+   - **Build command**: `npm run build`
+   - **Build output directory**: `dist`
+   - **Root directory**: `/` (leave blank or set to `/`)
+4. Click **Save and Deploy**.
+
+> **Note**: This repository already includes pre-configured `_redirects` for SPA routing and `_headers` for long-term Cloudflare edge caching of all 88 acoustic `.ogg` piano samples and static assets.
+
 ### Deploy on Vercel
-1. Push this repository to GitHub.
-2. Import the project on [Vercel](https://vercel.com/).
-3. Framework Preset: **Vite**.
-4. Click **Deploy**.
+1. Import the project on [Vercel](https://vercel.com/).
+2. Framework Preset: **Vite**.
+3. Click **Deploy**.
 
 ### Deploy on Netlify
 1. Connect your repository on [Netlify](https://www.netlify.com/).
