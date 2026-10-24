@@ -9,7 +9,7 @@
     <title>My Piano – Play Piano Online for Free</title>
     <meta name="description" content="Play piano online in your browser using your keyboard, mouse, or touchscreen. Explore octaves and practice piano notes without installing an app." />
     <meta name="keywords" content="play piano online, free online piano, virtual piano, 88 key piano online, computer keyboard piano, interactive piano web app" />
-    <meta name="author" content="My Piano" />
+    <meta name="author" content="Evostackr" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <link rel="canonical" href="https://mypiano.app/" />
 
@@ -50,6 +50,12 @@
           "@id": "https://mypiano.app/#website",
           "url": "https://mypiano.app/",
           "name": "My Piano",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Evostackr",
+            "url": "https://evostackr.in",
+            "email": "support@evostackr.in"
+          },
           "description": "Free interactive 88-key virtual piano application in your web browser.",
           "inLanguage": "en"
         },
@@ -71,6 +77,12 @@
           "operatingSystem": "All modern web browsers (Chrome, Edge, Firefox, Safari, iOS, Android)",
           "applicationCategory": "MultimediaApplication",
           "applicationSubCategory": "AudioApplication",
+          "author": {
+            "@type": "Organization",
+            "name": "Evostackr",
+            "url": "https://evostackr.in",
+            "email": "support@evostackr.in"
+          },
           "offers": {
             "@type": "Offer",
             "price": "0",
@@ -505,10 +517,10 @@
             <h2 class="section-h2">About My Piano</h2>
             <div class="about-card">
               <p>
-                <strong>My Piano</strong> is dedicated to delivering a distraction-free, reliable musical instrument accessible to anyone with an internet connection. Originally crafted as a responsive native instrument, this web edition brings the same low-latency performance and authentic sound library directly to the modern open web.
+                <strong>My Piano</strong> is crafted and maintained with dedication by <strong>Evostackr</strong> to deliver a distraction-free, reliable musical instrument accessible to anyone with an internet connection. Originally crafted as a responsive native instrument, this web edition brings the same low-latency performance and authentic sound library directly to the modern open web.
               </p>
               <p>
-                We believe learning and playing music should be simple, instantaneous, and accessible without advertising interruptions, bloated downloads, or complex account requirements.
+                We believe learning and playing music should be simple, instantaneous, and accessible without advertising interruptions, bloated downloads, or complex account requirements. For inquiries, technical assistance, or partnership opportunities, reach out to our team at <a href="mailto:support@evostackr.in" style="color: var(--color-accent-cyan); text-decoration: underline; font-weight: 600;">support@evostackr.in</a>.
               </p>
             </div>
           </section>
@@ -535,7 +547,7 @@
                 <span class="footer-brand-name">My Piano</span>
               </div>
               <p class="footer-desc">
-                An interactive, high-fidelity 88-key virtual piano running in your browser with authentic acoustic samples, 7 octaves, keyboard controls, and zero installation.
+                An interactive, high-fidelity 88-key virtual piano crafted by <strong>Evostackr</strong>. Runs in your browser with authentic acoustic samples, 7 octaves, keyboard controls, and zero installation.
               </p>
               <a href="#play" class="footer-cta-link">
                 <span>Open Piano Interface &uarr;</span>
@@ -574,7 +586,8 @@
               <ul class="footer-links">
                 <li><button class="footer-link-btn" id="openPrivacyBtn">Privacy Policy</button></li>
                 <li><button class="footer-link-btn" id="openTermsBtn">Terms of Use</button></li>
-                <li><button class="footer-link-btn" id="openContactBtn">Contact</button></li>
+                <li><button class="footer-link-btn" id="openContactBtn">Contact Us</button></li>
+                <li><a href="mailto:support@evostackr.in" class="footer-link-btn" style="color: var(--color-accent-cyan); font-weight: 600;">support@evostackr.in</a></li>
                 <li><a href="#about">About Us</a></li>
               </ul>
             </div>
@@ -640,6 +653,9 @@
             <br>
             <h4>3. Cookies and Local Storage</h4>
             <p>We do not use tracking cookies or third-party profiling technologies. Local browser memory is utilized solely for application state (such as active octave and volume level during your session).</p>
+            <br>
+            <h4>4. Contact Us</h4>
+            <p>If you have any questions or concerns about this privacy policy, please contact Evostackr at <a href="mailto:support@evostackr.in" style="color:var(--color-accent-cyan); text-decoration: underline;">support@evostackr.in</a>.</p>
           </div>
         </div>
       </div>
@@ -660,6 +676,9 @@
             <br>
             <h4>3. Disclaimer of Warranty</h4>
             <p>My Piano is provided "as is" without warranties of any kind. While we strive for seamless compatibility across all browsers, performance may vary depending on device hardware and browser capabilities.</p>
+            <br>
+            <h4>4. Contact & Inquiries</h4>
+            <p>My Piano is developed and operated by <strong>Evostackr</strong>. For legal or operational inquiries, email <a href="mailto:support@evostackr.in" style="color:var(--color-accent-cyan); text-decoration: underline;">support@evostackr.in</a>.</p>
           </div>
         </div>
       </div>
@@ -672,14 +691,20 @@
             <button class="close-btn" id="closeContactBtn" aria-label="Close modal">&times;</button>
           </div>
           <div class="modal-body">
-            <p>Have suggestions for improving My Piano, bug reports, or feature requests?</p>
-            <br>
-            <form id="contactForm" onsubmit="event.preventDefault(); alert('Thank you for your feedback!'); document.getElementById('contactModal').classList.remove('open');">
+            <div style="background: #181818; border: 1px solid #333; border-radius: 8px; padding: 16px; margin-bottom: 16px; text-align: center;">
+              <div style="font-size: 11px; font-weight: 700; color: #888; letter-spacing: 0.5px; margin-bottom: 6px; text-transform: uppercase;">Official Support by Evostackr</div>
+              <a href="mailto:support@evostackr.in" style="font-size: 18px; font-weight: 800; color: var(--color-accent-cyan); text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                support@evostackr.in
+              </a>
+              <p style="font-size: 12px; color: #aaa; margin-top: 6px;">Feel free to email us directly for assistance, questions, or bug reports.</p>
+            </div>
+            <form id="contactForm" onsubmit="event.preventDefault(); window.location.href='mailto:support@evostackr.in?subject=My%20Piano%20Feedback&body=' + encodeURIComponent(document.getElementById('contactMessage').value); document.getElementById('contactModal').classList.remove('open');">
               <div style="margin-bottom: 12px;">
                 <label for="contactMessage" style="display:block; font-size:13px; margin-bottom:4px; color:#bbb;">Your Message:</label>
-                <textarea id="contactMessage" rows="4" style="width:100%; background:#181818; border:1px solid #444; color:#fff; padding:8px; border-radius:6px; font-family:inherit;" placeholder="Share your thoughts or report an issue..." required></textarea>
+                <textarea id="contactMessage" rows="4" style="width:100%; background:#181818; border:1px solid #444; color:#fff; padding:8px; border-radius:6px; font-family:inherit;" placeholder="Write your message here... Clicking send will open your email client directly." required></textarea>
               </div>
-              <button type="submit" class="tool-btn active" style="width:100%; justify-content:center; padding:10px;">Send Feedback</button>
+              <button type="submit" class="tool-btn active" style="width:100%; justify-content:center; padding:10px;">Send to support@evostackr.in</button>
             </form>
           </div>
         </div>

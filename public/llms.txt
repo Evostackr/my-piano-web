@@ -17,7 +17,14 @@
 - **Black Keys**: W (C#4), E (D#4), T (F#4), Y (G#4), U (A#4), O (C#5), P (D#5)
 - **Octave Shift**: `[` shifts down one octave, `]` shifts up one octave.
 
+## Developer & Support
+- **Developer / Creator**: Evostackr
+- **Support Email**: support@evostackr.in
+- **Official Website**: https://evostackr.in
+
 ## Frequently Asked Questions
 - **Is My Piano free?** Yes, 100% free with no registration, subscriptions, or paywalls.
 - **Does it work on mobile?** Yes, it supports multi-touch on iOS and Android devices.
 - **Does it require installation?** No, it runs entirely in any modern web browser.
+- **Who developed My Piano?** My Piano is developed and maintained by Evostackr (support@evostackr.in).
+

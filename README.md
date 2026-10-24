@@ -120,6 +120,12 @@ The output bundle is generated inside the `dist/` directory, ready to be served 
 └── vite.config.js             # Vite configuration
 ```
 
+## 📬 Contact & Support
+
+Developed and maintained with ❤️ by **Evostackr**.
+- **Support Email**: [support@evostackr.in](mailto:support@evostackr.in)
+- **Website**: [https://evostackr.in](https://evostackr.in)
+
 ---
 
 ## 📄 License
