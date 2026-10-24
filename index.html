@@ -1,98 +1,252 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#272727" />
 
-    <!-- Technical SEO Primary Meta Tags -->
-    <title>My Piano – Play Piano Online for Free</title>
-    <meta name="description" content="Play piano online in your browser using your keyboard, mouse, or touchscreen. Explore octaves and practice piano notes without installing an app." />
-    <meta name="keywords" content="play piano online, free online piano, virtual piano, 88 key piano online, computer keyboard piano, interactive piano web app" />
+    <!-- 1. Technical SEO & Indexability -->
+    <title>My Piano – Play 88-Key Piano Online for Free | Evostackr</title>
+    <meta name="description" content="Play piano online in your browser with 88 authentic acoustic grand piano notes across 7 octaves. Practice chords, songs, and scales using your computer keyboard or touch with zero delay." />
+    <meta name="keywords" content="play piano online, free online piano, virtual piano 88 keys, keyboard piano online, interactive piano web app, evostackr piano, piano chords player, online grand piano" />
     <meta name="author" content="Evostackr" />
+    <meta name="publisher" content="Evostackr" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-    <link rel="canonical" href="https://mypiano.app/" />
+    <link rel="canonical" href="https://my-piano.evostackr.in/" />
 
-    <!-- Open Graph / Facebook / Social Meta -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://mypiano.app/" />
-    <meta property="og:site_name" content="My Piano" />
-    <meta property="og:title" content="My Piano – Play Piano Online for Free" />
-    <meta property="og:description" content="Play piano online in your browser using your keyboard, mouse, or touchscreen. Explore octaves and practice piano notes without installing an app." />
-    <meta property="og:image" content="https://mypiano.app/images/scrollbgm.jpg" />
-    <meta property="og:locale" content="en_US" />
-
-    <!-- Twitter Card Meta -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="My Piano – Play Piano Online for Free" />
-    <meta name="twitter:description" content="Play piano online in your browser using your keyboard, mouse, or touchscreen. Explore octaves and practice piano notes without installing an app." />
-    <meta name="twitter:image" content="https://mypiano.app/images/scrollbgm.jpg" />
-
-    <!-- Favicon & Icons -->
+    <!-- 2. PWA Manifest & Mobile Icons -->
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="icon" type="image/webp" href="/favicon.webp" />
     <link rel="apple-touch-icon" href="/favicon.webp" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="My Piano" />
 
-    <!-- Fonts -->
+    <!-- 3. Open Graph / Facebook / Social Meta -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://my-piano.evostackr.in/" />
+    <meta property="og:site_name" content="My Piano by Evostackr" />
+    <meta property="og:title" content="My Piano – Play 88-Key Piano Online for Free | Evostackr" />
+    <meta property="og:description" content="Play piano online in your browser with 88 authentic acoustic grand piano notes across 7 octaves. Practice chords, songs, and scales using your computer keyboard or touch with zero delay." />
+    <meta property="og:image" content="https://my-piano.evostackr.in/images/scrollbgm.jpg" />
+    <meta property="og:image:alt" content="My Piano 88-Key Interactive Virtual Piano Keyboard by Evostackr" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- 4. Twitter Card Meta -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@evostackr" />
+    <meta name="twitter:creator" content="@evostackr" />
+    <meta name="twitter:title" content="My Piano – Play 88-Key Piano Online for Free | Evostackr" />
+    <meta name="twitter:description" content="Play piano online in your browser with 88 authentic acoustic grand piano notes across 7 octaves. Practice chords, songs, and scales using your computer keyboard or touch with zero delay." />
+    <meta name="twitter:image" content="https://my-piano.evostackr.in/images/scrollbgm.jpg" />
+    <meta name="twitter:image:alt" content="My Piano 88-Key Interactive Virtual Piano Keyboard by Evostackr" />
+
+    <!-- 5. Performance Preconnects & Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet" />
 
+    <!-- 6. Preload Critical Audio & Assets -->
+    <link rel="preload" href="/sounds/c4.ogg" as="fetch" type="audio/ogg" crossorigin />
+    <link rel="preload" href="/sounds/a4.ogg" as="fetch" type="audio/ogg" crossorigin />
+    <link rel="preload" href="/images/scrollbgm.jpg" as="image" />
+    <link rel="preload" href="/images/thumb.jpg" as="image" />
+
     <!-- Stylesheet -->
     <link rel="stylesheet" href="/src/style.css" />
 
-    <!-- Structured Data: WebSite, WebPage, SoftwareApplication, FAQPage -->
+    <!-- 7. Comprehensive Schema.org JSON-LD Structured Data (Organization, WebSite, WebPage, BreadcrumbList, SoftwareApplication, HowTo, Article, FAQPage, SpeakableSpecification) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "WebSite",
-          "@id": "https://mypiano.app/#website",
-          "url": "https://mypiano.app/",
-          "name": "My Piano",
-          "publisher": {
-            "@type": "Organization",
-            "name": "Evostackr",
-            "url": "https://evostackr.in",
-            "email": "support@evostackr.in"
+          "@type": "Organization",
+          "@id": "https://my-piano.evostackr.in/#organization",
+          "name": "Evostackr",
+          "legalName": "Evostackr",
+          "url": "https://evostackr.in",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://my-piano.evostackr.in/favicon.webp",
+            "width": 512,
+            "height": 512
           },
-          "description": "Free interactive 88-key virtual piano application in your web browser.",
-          "inLanguage": "en"
+          "email": "support@evostackr.in",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "email": "support@evostackr.in",
+            "availableLanguage": ["English", "Hindi"]
+          },
+          "sameAs": [
+            "https://github.com/Evostackr",
+            "https://evostackr.in"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://my-piano.evostackr.in/#website",
+          "url": "https://my-piano.evostackr.in/",
+          "name": "My Piano by Evostackr",
+          "alternateName": ["My Piano", "My Piano Online", "Free Virtual Piano 88 Keys"],
+          "publisher": {
+            "@id": "https://my-piano.evostackr.in/#organization"
+          },
+          "description": "Free interactive 88-key virtual piano application in your web browser with authentic acoustic samples, 7 octaves, keyboard controls, and zero installation.",
+          "inLanguage": "en-US",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://my-piano.evostackr.in/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
         },
         {
           "@type": "WebPage",
-          "@id": "https://mypiano.app/#webpage",
-          "url": "https://mypiano.app/",
-          "name": "My Piano – Play Piano Online for Free",
+          "@id": "https://my-piano.evostackr.in/#webpage",
+          "url": "https://my-piano.evostackr.in/",
+          "name": "My Piano – Play 88-Key Piano Online for Free | Evostackr",
           "isPartOf": {
-            "@id": "https://mypiano.app/#website"
+            "@id": "https://my-piano.evostackr.in/#website"
           },
-          "description": "Play piano online in your browser using your keyboard, mouse, or touchscreen. Explore octaves and practice piano notes without installing an app.",
-          "inLanguage": "en"
+          "about": {
+            "@type": "Thing",
+            "name": "Piano",
+            "description": "An acoustic musical instrument with keyboard, playing 88 notes with individual natural and accidental pitches."
+          },
+          "description": "Play piano online in your browser with 88 authentic acoustic grand piano notes across 7 octaves. Practice chords, songs, and scales using your computer keyboard or touch with zero delay.",
+          "inLanguage": "en-US",
+          "breadcrumb": {
+            "@id": "https://my-piano.evostackr.in/#breadcrumb"
+          },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://my-piano.evostackr.in/images/scrollbgm.jpg"
+          },
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": [
+              ".page-h1",
+              ".lead-text",
+              ".faq-question",
+              ".faq-answer"
+            ]
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://my-piano.evostackr.in/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://my-piano.evostackr.in/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Play Online Piano",
+              "item": "https://my-piano.evostackr.in/#play"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Piano Keyboard Guide",
+              "item": "https://my-piano.evostackr.in/#piano-guide"
+            }
+          ]
         },
         {
           "@type": "SoftwareApplication",
-          "@id": "https://mypiano.app/#software",
+          "@id": "https://my-piano.evostackr.in/#software",
           "name": "My Piano Online",
           "operatingSystem": "All modern web browsers (Chrome, Edge, Firefox, Safari, iOS, Android)",
           "applicationCategory": "MultimediaApplication",
           "applicationSubCategory": "AudioApplication",
+          "softwareVersion": "2.0.0",
+          "inLanguage": "en",
           "author": {
-            "@type": "Organization",
-            "name": "Evostackr",
-            "url": "https://evostackr.in",
-            "email": "support@evostackr.in"
+            "@id": "https://my-piano.evostackr.in/#organization"
+          },
+          "creator": {
+            "@id": "https://my-piano.evostackr.in/#organization"
           },
           "offers": {
             "@type": "Offer",
             "price": "0",
-            "priceCurrency": "USD"
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
           },
+          "featureList": [
+            "88 studio acoustic grand piano recordings",
+            "7 full octaves with 84 playable keys",
+            "Zero-latency polyphonic Web Audio API engine",
+            "Interactive 88-key miniature piano seekbar navigator",
+            "QWERTY desktop computer keyboard controls",
+            "Multi-touch glissando and chord capability",
+            "Client-side execution with zero tracking"
+          ],
           "description": "Play piano online in your browser with real grand piano audio samples, 7 octaves, keyboard shortcuts, multi-touch glissando, and an interactive mini-map seekbar."
         },
         {
+          "@type": "HowTo",
+          "@id": "https://my-piano.evostackr.in/#howto",
+          "name": "How to Play Piano Online in Your Browser",
+          "description": "Step-by-step instructions to play the 88-key virtual piano using your computer keyboard, mouse, or touchscreen device.",
+          "image": "https://my-piano.evostackr.in/images/scrollbgm.jpg",
+          "totalTime": "PT1M",
+          "step": [
+            {
+              "@type": "HowToStep",
+              "position": 1,
+              "name": "Initialize Web Audio",
+              "text": "Click or tap any key on the piano to start the browser Web Audio context under modern browser autoplay policies.",
+              "url": "https://my-piano.evostackr.in/#play"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 2,
+              "name": "Play Notes with Keyboard or Mouse",
+              "text": "Use the computer keyboard home-row keys (A through J for white natural notes, W through U for black sharps) or click and drag across keys for smooth glissando.",
+              "url": "https://my-piano.evostackr.in/#how-to-play"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 3,
+              "name": "Shift Octaves",
+              "text": "Navigate across the 7 full octaves by clicking the Octave pills (1 to 7), dragging the mini-piano seekbar navigator, or pressing the [ and ] bracket keys.",
+              "url": "https://my-piano.evostackr.in/#how-to-play"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 4,
+              "name": "Play Full Chords Simultaneously",
+              "text": "Leverage zero-latency polyphony by striking multiple computer keys simultaneously or placing multiple fingers on the touchscreen to play rich chords.",
+              "url": "https://my-piano.evostackr.in/#features"
+            }
+          ]
+        },
+        {
+          "@type": "Article",
+          "@id": "https://my-piano.evostackr.in/#guide-article",
+          "headline": "Piano Keyboard Guide: Understanding Notes, Octaves, and Keys",
+          "description": "A comprehensive beginner guide explaining white natural keys, black sharps, octave intervals, and finding Middle C on an 88-key piano keyboard.",
+          "author": {
+            "@id": "https://my-piano.evostackr.in/#organization"
+          },
+          "publisher": {
+            "@id": "https://my-piano.evostackr.in/#organization"
+          },
+          "datePublished": "2026-10-24",
+          "dateModified": "2026-10-24",
+          "mainEntityOfPage": "https://my-piano.evostackr.in/#piano-guide"
+        },
+        {
           "@type": "FAQPage",
-          "@id": "https://mypiano.app/#faq",
+          "@id": "https://my-piano.evostackr.in/#faq-schema",
           "mainEntity": [
             {
               "@type": "Question",
@@ -162,8 +316,8 @@
       <header class="site-header" id="top">
         <div class="site-header-container">
           <!-- Brand Area -->
-          <a href="#top" class="brand-link" aria-label="My Piano Home">
-            <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <a href="#top" class="brand-link" aria-label="My Piano Home by Evostackr">
+            <svg class="brand-icon" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true">
               <rect x="2" y="3" width="20" height="18" rx="2" fill="#272727" stroke="#ffffff" stroke-width="1.5"/>
               <line x1="6" y1="3" x2="6" y2="21" stroke="#ffffff" stroke-width="1.2"/>
               <line x1="10" y1="3" x2="10" y2="21" stroke="#ffffff" stroke-width="1.2"/>
@@ -191,7 +345,7 @@
           <div class="header-actions">
             <a href="#play" class="header-play-btn" title="Jump to Interactive Piano">
               <span>Play Now</span>
-              <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
             </a>
             <!-- Mobile Menu Toggle Button -->
             <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileNavDrawer">
@@ -219,7 +373,7 @@
       <!-- Main Content Area -->
       <main class="main-content">
         <!-- 2. Interactive Piano Application Container -->
-        <section class="piano-app-section" id="play" aria-label="Interactive Virtual Piano">
+        <section class="piano-app-section" id="play" aria-label="Interactive Virtual Piano Keyboard">
           <div class="portrait-hint">
             <span>💡 Tip: Rotate your device to landscape for the full piano experience.</span>
           </div>
@@ -231,14 +385,14 @@
               <div class="title-bar">
                 <div class="title-bar-left">
                   <button id="fullscreenBtn" class="tool-btn" title="Toggle Fullscreen" aria-label="Toggle Fullscreen">
-                    <svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
                     <span>Fullscreen</span>
                   </button>
                   <div class="volume-control">
-                    <button id="muteBtn" class="tool-btn" style="padding: 2px 6px; border:none; background:transparent;" title="Mute/Unmute" aria-label="Mute/Unmute">
-                      <svg id="volumeIcon" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                    <button id="muteBtn" class="tool-btn" style="padding: 2px 6px; border:none; background:transparent;" title="Mute/Unmute" aria-label="Mute or Unmute Audio">
+                      <svg id="volumeIcon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
                     </button>
-                    <input type="range" id="volumeSlider" class="volume-slider" min="0" max="1" step="0.05" value="0.85" title="Volume Slider" />
+                    <input type="range" id="volumeSlider" class="volume-slider" min="0" max="1" step="0.05" value="0.85" title="Master Volume Slider" aria-label="Master Volume Slider" />
                   </div>
                 </div>
 
@@ -247,25 +401,25 @@
                 </div>
 
                 <div class="title-bar-right">
-                  <button id="toggleShortcutsBtn" class="tool-btn" title="Toggle Keyboard Shortcut Badges">
-                    <svg viewBox="0 0 24 24"><path d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-9 3h2v2h-2V8zm0 3h2v2h-2v-2zM8 8h2v2H8V8zm0 3h2v2H8v-2zm-1 2H5v-2h2v2zm0-3H5V8h2v2zm9 7H8v-2h8v2zm0-4h-2v-2h2v2zm0-3h-2V8h2v2zm3 3h-2v-2h2v2zm0-3h-2V8h2v2z"/></svg>
+                  <button id="toggleShortcutsBtn" class="tool-btn" title="Toggle Keyboard Shortcut Badges" aria-label="Toggle Keyboard Shortcut Badges">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-9 3h2v2h-2V8zm0 3h2v2h-2v-2zM8 8h2v2H8V8zm0 3h2v2H8v-2zm-1 2H5v-2h2v2zm0-3H5V8h2v2zm9 7H8v-2h8v2zm0-4h-2v-2h2v2zm0-3h-2V8h2v2zm3 3h-2v-2h2v2zm0-3h-2V8h2v2z"/></svg>
                     <span>Keys</span>
                   </button>
-                  <button id="helpBtn" class="tool-btn" title="Help & Info" aria-label="Help">
-                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 16h-2v-2h2v2zm1.07-7.75l-.9.92C12.45 11.9 12 12.5 12 14h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>
+                  <button id="helpBtn" class="tool-btn" title="Help & Controls Guide" aria-label="Help and Controls Guide">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 16h-2v-2h2v2zm1.07-7.75l-.9.92C12.45 11.9 12 12.5 12 14h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>
                   </button>
                 </div>
               </div>
 
               <!-- Seekbar / Mini Piano Navigator (matching Android layout with scrollbgm.jpg & thumb.jpg) -->
               <div class="seekbar-row">
-                <div class="mini-map-container" id="miniMapContainer" title="Mini Piano Navigator: Click or drag to jump across octaves">
+                <div class="mini-map-container" id="miniMapContainer" title="Mini Piano Navigator: Click or drag to jump across octaves" role="slider" aria-label="Octave navigation slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="55">
                   <div class="mini-map-thumb" id="miniMapThumb"></div>
                 </div>
               </div>
 
               <!-- Octave Quick Navigation Bar -->
-              <div class="octave-selector-bar">
+              <div class="octave-selector-bar" role="toolbar" aria-label="Octave quick selection">
                 <span class="octaves-label">OCTAVES:</span>
                 <button class="octave-pill" data-octave="1">Octave 1</button>
                 <button class="octave-pill" data-octave="2">Octave 2</button>
@@ -278,7 +432,7 @@
             </div>
 
             <!-- Scrollable Piano Keyboard Area (~67% height, matching Android HorizontalScrollView) -->
-            <div class="piano-scroll-container" id="pianoScrollContainer">
+            <div class="piano-scroll-container" id="pianoScrollContainer" tabindex="0" role="region" aria-label="Scrollable 88-Note Piano Surface">
               <div class="piano-surface" id="pianoSurface">
                 <!-- White Keys Container (49 keys) -->
                 <div class="white-keys-layout" id="whiteKeysLayout"></div>
@@ -291,11 +445,28 @@
 
         <!-- 3. SEO, AEO & GEO Supporting Content Sections -->
         <article class="content-container">
+          <!-- Breadcrumb Navigation -->
+          <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+            <ol class="breadcrumb-list">
+              <li class="breadcrumb-item"><a href="#top">Home</a></li>
+              <li class="breadcrumb-separator" aria-hidden="true">&rsaquo;</li>
+              <li class="breadcrumb-item"><a href="#play">Virtual Piano</a></li>
+              <li class="breadcrumb-separator" aria-hidden="true">&rsaquo;</li>
+              <li class="breadcrumb-item current" aria-current="page">88-Key Free Player</li>
+            </ol>
+          </nav>
+
+          <!-- E-E-A-T Trust Badge -->
+          <div class="eeat-badge">
+            <span class="eeat-icon">✓</span>
+            <span>Developed by <strong>Evostackr Audio Labs</strong> • 88 Studio-Sampled Acoustic Notes • Zero-Latency Web Audio API • 100% Free & Private</span>
+          </div>
+
           <!-- Primary Section & H1 -->
           <section class="content-block intro-block">
-            <h1 class="page-h1">Play Piano Online for Free</h1>
+            <h1 class="page-h1">Play 88-Key Piano Online for Free</h1>
             <p class="lead-text">
-              Welcome to <strong>My Piano</strong>, a fast, responsive virtual piano that brings authentic acoustic grand piano sounds straight to your browser. Designed for practice, music learning, and creative play, My Piano spans <strong>7 full octaves</strong> with <strong>88 authentic acoustic note samples</strong>. You can play effortlessly using your computer keyboard, mouse, or multi-touch mobile screen with zero plugins or installation required.
+              <strong>My Piano</strong> is a high-performance interactive virtual piano developed by <strong>Evostackr</strong> that allows musicians, students, and hobbyists to play piano online directly in their web browser. Featuring <strong>88 authentic acoustic grand piano note recordings</strong> spanning <strong>7 full octaves</strong>, it supports instantaneous polyphonic chord playing using your computer keyboard, mouse, or multi-touch mobile screen with zero lag, plugins, or software downloads.
             </p>
           </section>
 
@@ -303,61 +474,61 @@
           <section class="content-block" id="how-to-play">
             <h2 class="section-h2">How to Play the Online Piano</h2>
             <p class="section-desc">
-              My Piano provides multiple intuitive input methods designed to give you a responsive, realistic playing experience whether on a desktop, laptop, tablet, or phone.
+              Playing My Piano is designed to be as natural and expressive as sitting down at a real acoustic instrument. You can choose between touch, mouse, and desktop computer keyboard input methods.
             </p>
 
             <div class="cards-grid">
               <div class="info-card">
                 <div class="card-icon">🖱️</div>
-                <h3 class="card-title">Mouse & Touch Controls</h3>
-                <p>Click any white or black key to strike that note. You can also press and drag your mouse across keys for a smooth glissando. On touchscreens, multi-touch chord playing is fully supported.</p>
+                <h3 class="card-title">Mouse & Touch Glissando</h3>
+                <p>Click any white or black key to strike that note. Press and drag your mouse or finger across adjacent keys to perform fluid, continuous glissando sweeps. On touchscreen tablets and phones, multi-touch allows you to play full chords naturally.</p>
               </div>
 
               <div class="info-card">
                 <div class="card-icon">⌨️</div>
                 <h3 class="card-title">Computer Keyboard Play</h3>
-                <p>Use your desktop or laptop keyboard to play naturally. White keys map to your home row (<span class="kbd-inline">A</span>, <span class="kbd-inline">S</span>, <span class="kbd-inline">D</span>, <span class="kbd-inline">F</span>, <span class="kbd-inline">G</span>, <span class="kbd-inline">H</span>, <span class="kbd-inline">J</span>), while black keys map to upper keys (<span class="kbd-inline">W</span>, <span class="kbd-inline">E</span>, <span class="kbd-inline">T</span>, <span class="kbd-inline">Y</span>, <span class="kbd-inline">U</span>).</p>
+                <p>Use your QWERTY keyboard as a virtual keyboard synthesizer. The home row (<span class="kbd-inline">A</span> through <span class="kbd-inline">J</span>) triggers natural white keys, while the upper row (<span class="kbd-inline">W</span>, <span class="kbd-inline">E</span>, <span class="kbd-inline">T</span>, <span class="kbd-inline">Y</span>, <span class="kbd-inline">U</span>) strikes black sharp keys.</p>
               </div>
 
               <div class="info-card">
                 <div class="card-icon">🎛️</div>
-                <h3 class="card-title">Changing Octaves</h3>
-                <p>Jump to any octave using the quick pills (Octave 1 to 7), drag the top mini-piano seekbar, or tap the <span class="kbd-inline">[</span> and <span class="kbd-inline">]</span> bracket keys on your computer keyboard to shift up or down.</p>
+                <h3 class="card-title">7-Octave Navigation</h3>
+                <p>Explore the full piano range by clicking any of the <strong>Octave 1 to 7 pills</strong>, sliding the miniature piano seekbar navigator at the top, or tapping the <span class="kbd-inline">[</span> (down) and <span class="kbd-inline">]</span> (up) bracket keys on your keyboard.</p>
               </div>
 
               <div class="info-card">
                 <div class="card-icon">🔊</div>
-                <h3 class="card-title">Volume & Audio Settings</h3>
-                <p>Fine-tune audio levels with the volume slider or click the speaker icon to mute/unmute instantly. The Web Audio API ensures pure acoustics without audio lag or clipping.</p>
+                <h3 class="card-title">Master Volume & Fullscreen</h3>
+                <p>Fine-tune acoustics with the responsive master volume slider or toggle instant mute. For a distraction-free recital experience, click the <strong>Fullscreen</strong> button to expand the piano to your full screen.</p>
               </div>
             </div>
 
             <!-- Keyboard Mapping Table -->
             <div class="keyboard-table-wrapper">
-              <h3 class="sub-h3">Default QWERTY Keyboard Reference (Octave 4 / Middle C)</h3>
+              <h3 class="sub-h3">Default QWERTY Keyboard Reference (Middle C / Octave 4)</h3>
               <div class="table-responsive">
                 <table class="key-table">
                   <thead>
                     <tr>
-                      <th>Note</th>
-                      <th>C4</th>
-                      <th>C#4</th>
-                      <th>D4</th>
-                      <th>D#4</th>
-                      <th>E4</th>
-                      <th>F4</th>
-                      <th>F#4</th>
-                      <th>G4</th>
-                      <th>G#4</th>
-                      <th>A4</th>
-                      <th>A#4</th>
-                      <th>B4</th>
-                      <th>C5</th>
+                      <th scope="col">Note</th>
+                      <th scope="col">C4</th>
+                      <th scope="col">C#4</th>
+                      <th scope="col">D4</th>
+                      <th scope="col">D#4</th>
+                      <th scope="col">E4</th>
+                      <th scope="col">F4</th>
+                      <th scope="col">F#4</th>
+                      <th scope="col">G4</th>
+                      <th scope="col">G#4</th>
+                      <th scope="col">A4</th>
+                      <th scope="col">A#4</th>
+                      <th scope="col">B4</th>
+                      <th scope="col">C5</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td><strong>Keyboard Key</strong></td>
+                      <th scope="row"><strong>Keyboard Key</strong></th>
                       <td><span class="kbd">A</span></td>
                       <td><span class="kbd">W</span></td>
                       <td><span class="kbd">S</span></td>
@@ -375,7 +546,7 @@
                   </tbody>
                 </table>
               </div>
-              <p class="table-caption">Press <span class="kbd">[</span> to shift keyboard controls down one octave, or <span class="kbd">]</span> to shift up one octave.</p>
+              <p class="table-caption">Press <span class="kbd">[</span> to shift keyboard controls down one octave, or <span class="kbd">]</span> to shift up one octave. Check our <a href="#piano-guide" class="text-link">Piano Keyboard Guide</a> below to learn note intervals.</p>
             </div>
           </section>
 
@@ -383,15 +554,15 @@
           <section class="content-block" id="features">
             <h2 class="section-h2">Online Piano Features</h2>
             <p class="section-desc">
-              My Piano focuses on pure performance, realistic acoustics, and authentic tactile feedback.
+              Engineered by Evostackr with performance and authenticity as top priorities, My Piano avoids bloated gimmicks and provides a pure, responsive musical instrument.
             </p>
 
             <div class="features-list">
               <div class="feature-item">
                 <div class="feature-bullet"></div>
                 <div>
-                  <h3 class="feature-name">88 Authentic Acoustic Piano Samples</h3>
-                  <p class="feature-text">Every single note is backed by a dedicated, studio-recorded acoustic grand piano Vorbis (.ogg) sample, preserving natural attack, harmonic warmth, and decay.</p>
+                  <h3 class="feature-name">88 Dedicated Acoustic Grand Piano Recordings</h3>
+                  <p class="feature-text">Unlike synthesizers that pitch-shift a single audio sample, My Piano contains 88 individual studio recordings in lightweight Ogg Vorbis format, preserving the authentic acoustic timbre and resonance of every string.</p>
                 </div>
               </div>
 
@@ -399,7 +570,7 @@
                 <div class="feature-bullet"></div>
                 <div>
                   <h3 class="feature-name">7 Full Octaves & 84 Active Keys</h3>
-                  <p class="feature-text">Spans 49 white keys (A1 to G7) and 35 black keys (A#1 to G#7), providing the comprehensive range necessary for classical pieces, pop melodies, and chord progressions.</p>
+                  <p class="feature-text">Spanning from deep bass notes (A1) to sparkling trebles (G7), giving you the full dynamic keyboard range required for classical sonatas, jazz improvisations, and pop accompaniments.</p>
                 </div>
               </div>
 
@@ -407,7 +578,7 @@
                 <div class="feature-bullet"></div>
                 <div>
                   <h3 class="feature-name">Zero-Latency Web Audio API Polyphony</h3>
-                  <p class="feature-text">Built on modern Web Audio standards, allowing you to play rich multi-note chords and rapid trills without dropped voices, distortion, or perceptible delay.</p>
+                  <p class="feature-text">Built on native browser Web Audio API buffers with master gain routing, ensuring instantaneous sound delivery, full multi-finger chord polyphony, and zero audio clipping.</p>
                 </div>
               </div>
 
@@ -415,23 +586,23 @@
                 <div class="feature-bullet"></div>
                 <div>
                   <h3 class="feature-name">Interactive Mini-Piano Seekbar Navigator</h3>
-                  <p class="feature-text">The top seekbar renders an authentic miniature 88-key piano strip. Drag or click the viewport indicator to pan across octaves with smooth bidirectional synchronization.</p>
+                  <p class="feature-text">A synchronized mini-piano strip renders all 88 keys at a glance. Drag or click anywhere on the navigator to jump smoothly across the keyboard.</p>
                 </div>
               </div>
 
               <div class="feature-item">
                 <div class="feature-bullet"></div>
                 <div>
-                  <h3 class="feature-name">Visual Active Touch Glow (#80ffe5)</h3>
-                  <p class="feature-text">Keys light up in a distinct cyan highlight on contact, giving visual confirmation of struck notes that exactly matches the original native mobile experience.</p>
+                  <h3 class="feature-name">Tactile Visual Contact Feedback (#80ffe5)</h3>
+                  <p class="feature-text">Keys respond immediately with a distinct cyan accent glow upon key contact, offering clear visual feedback whether you play via keyboard, touch, or mouse.</p>
                 </div>
               </div>
 
               <div class="feature-item">
                 <div class="feature-bullet"></div>
                 <div>
-                  <h3 class="feature-name">100% Free & No Account Needed</h3>
-                  <p class="feature-text">Instant access with no registrations, subscriptions, or paywalls. Operates entirely in client-side memory for complete privacy.</p>
+                  <h3 class="feature-name">100% Free, Private & Client-Side</h3>
+                  <p class="feature-text">No user accounts, subscriptions, analytics trackers, or invasive ads. All audio and logic run entirely in your local browser memory for complete privacy.</p>
                 </div>
               </div>
             </div>
@@ -441,28 +612,28 @@
           <section class="content-block" id="piano-guide">
             <h2 class="section-h2">Piano Keyboard Guide</h2>
             <p class="section-desc">
-              Whether you are an aspiring pianist or brushing up on music theory, understanding how a piano is arranged makes learning songs faster and more enjoyable.
+              Understand the layout and geometry of the piano keyboard to master melodies, chords, and scales faster.
             </p>
 
             <div class="guide-grid">
               <div class="guide-box" id="white-keys">
                 <h3 class="guide-h3">Understanding White Keys (Natural Notes)</h3>
-                <p>The white keys represent the seven natural notes in Western music: <strong>A, B, C, D, E, F, and G</strong>. This seven-note sequence repeats continuously across the keyboard from left to right. As you move to the right, the pitch becomes higher; moving left produces deeper bass tones.</p>
+                <p>The white keys represent the seven natural notes in Western music: <strong>A, B, C, D, E, F, and G</strong>. This seven-note sequence repeats continuously across the keyboard from left to right. Moving right raises the pitch, while moving left lowers it into the deep bass register.</p>
               </div>
 
               <div class="guide-box" id="black-keys">
                 <h3 class="guide-h3">Understanding Black Keys (Sharps & Accidentals)</h3>
-                <p>Black keys are arranged in repeating groups of two and three. They represent accidentals—sharps (♯) and flats (♭). In My Piano, these keys produce <strong>A#, C#, D#, F#, and G#</strong> notes, positioned precisely between their corresponding natural keys.</p>
+                <p>Black keys are arranged in repeating patterns of two and three. They represent accidentals—sharps (♯) and flats (♭). In My Piano, these keys produce <strong>A#, C#, D#, F#, and G#</strong>, positioned symmetrically above their natural neighbors.</p>
               </div>
 
               <div class="guide-box" id="beginner-tips">
                 <h3 class="guide-h3">Finding Middle C (C4)</h3>
-                <p>Middle C (labeled <strong>C4</strong> on the piano keyboard) is the most important anchor note for beginners. It sits directly to the left of any group of two black keys near the center of the instrument. Octave 4 on My Piano is selected by default for easy song practice.</p>
+                <p>Middle C (labeled <strong>C4</strong> on our virtual keyboard) is the universal reference note for pianists. It sits directly to the left of the group of two black keys in the center of the instrument. My Piano opens focused on Middle C (Octave 4) by default.</p>
               </div>
 
               <div class="guide-box" id="octaves-info">
-                <h3 class="guide-h3">Octaves & Musical Pitch</h3>
-                <p>An octave is the interval between one musical pitch and another with double its frequency. On our 7-octave piano, moving from C1 up to C7 demonstrates how the fundamental pitch doubles every octave while preserving the same harmonic note name.</p>
+                <h3 class="guide-h3">Octaves & Harmonic Intervals</h3>
+                <p>An octave is the interval between one musical pitch and another with double its frequency. On our 7-octave piano, moving from C1 up to C7 demonstrates how the fundamental acoustic frequency doubles every octave while preserving the same pitch class.</p>
               </div>
             </div>
           </section>
@@ -471,23 +642,23 @@
           <section class="content-block" id="faq">
             <h2 class="section-h2">Frequently Asked Questions</h2>
             <p class="section-desc">
-              Direct, verified answers to common questions about playing piano online with My Piano.
+              Clear, verified answers to the most common questions about playing piano online with My Piano.
             </p>
 
             <div class="faq-list">
               <div class="faq-item">
                 <h3 class="faq-question">How do I play piano online for free?</h3>
-                <p class="faq-answer">Simply visit My Piano in any browser on your computer, tablet, or phone. You can immediately strike keys using your mouse, tap with your fingers on touchscreen devices, or type on your computer keyboard. There are no fees, trials, or downloads required.</p>
+                <p class="faq-answer">Visit My Piano at <a href="https://my-piano.evostackr.in/" class="text-link">https://my-piano.evostackr.in/</a> in any modern browser. You can immediately strike keys using your mouse, tap with your fingers on touchscreen devices, or type on your computer keyboard. There are no fees, subscriptions, or downloads required.</p>
               </div>
 
               <div class="faq-item">
                 <h3 class="faq-question">Can I play the piano using my computer keyboard?</h3>
-                <p class="faq-answer">Yes. Home row keys (A through J) trigger natural white keys, while upper keys (W, E, T, Y, U, O, P) trigger black sharp keys in the selected octave. You can toggle key badges on the piano by clicking the "Keys" button in the control toolbar.</p>
+                <p class="faq-answer">Yes. Computer keyboard controls are mapped to the home row keys (A through J for natural white notes, W through U for black accidentals) in the active octave. Toggle the key badges on the piano by clicking the "Keys" button in the control toolbar.</p>
               </div>
 
               <div class="faq-item">
                 <h3 class="faq-question">Can I use this online piano on my phone or tablet?</h3>
-                <p class="faq-answer">Yes. My Piano is fully responsive and supports multi-touch gestures on mobile devices. You can play multiple notes at once or slide your finger across keys for glissando. Rotating your device to landscape provides a wider, more comfortable layout.</p>
+                <p class="faq-answer">Yes. My Piano is fully responsive and supports multi-touch gestures on iOS (Safari) and Android (Chrome). You can play multiple notes at once or slide your finger across keys for glissando. Rotating your device to landscape provides a wider, more comfortable layout.</p>
               </div>
 
               <div class="faq-item">
@@ -502,7 +673,7 @@
 
               <div class="faq-item">
                 <h3 class="faq-question">Why is there no sound when I first open the website?</h3>
-                <p class="faq-answer">All modern browsers (Chrome, Safari, Edge, Firefox) have autoplay security policies that mute audio until you interact with the page. Sound activates immediately as soon as you click or tap your first piano key.</p>
+                <p class="faq-answer">All modern browsers (Chrome, Safari, Edge, Firefox) enforce autoplay security policies that mute audio until you interact with the page. Sound activates immediately as soon as you click or tap your first piano key.</p>
               </div>
 
               <div class="faq-item">
@@ -514,13 +685,13 @@
 
           <!-- About My Piano Section -->
           <section class="content-block" id="about">
-            <h2 class="section-h2">About My Piano</h2>
+            <h2 class="section-h2">About My Piano & Evostackr</h2>
             <div class="about-card">
               <p>
                 <strong>My Piano</strong> is crafted and maintained with dedication by <strong>Evostackr</strong> to deliver a distraction-free, reliable musical instrument accessible to anyone with an internet connection. Originally crafted as a responsive native instrument, this web edition brings the same low-latency performance and authentic sound library directly to the modern open web.
               </p>
               <p>
-                We believe learning and playing music should be simple, instantaneous, and accessible without advertising interruptions, bloated downloads, or complex account requirements. For inquiries, technical assistance, or partnership opportunities, reach out to our team at <a href="mailto:support@evostackr.in" style="color: var(--color-accent-cyan); text-decoration: underline; font-weight: 600;">support@evostackr.in</a>.
+                We believe learning and playing music should be simple, instantaneous, and accessible without advertising interruptions, bloated downloads, or complex account requirements. For inquiries, technical assistance, or partnership opportunities, reach out to our team at <a href="mailto:support@evostackr.in" class="text-link" style="font-weight: 600;">support@evostackr.in</a>.
               </p>
             </div>
           </section>
@@ -596,7 +767,7 @@
           <!-- Footer Bottom -->
           <div class="footer-bottom">
             <div class="copyright-text">
-              &copy; <span id="copyrightYear">2026</span> My Piano. All rights reserved.
+              &copy; <span id="copyrightYear">2026</span> My Piano by Evostackr. All rights reserved.
             </div>
             <div class="footer-badge">
               <span class="status-dot"></span>
@@ -655,7 +826,7 @@
             <p>We do not use tracking cookies or third-party profiling technologies. Local browser memory is utilized solely for application state (such as active octave and volume level during your session).</p>
             <br>
             <h4>4. Contact Us</h4>
-            <p>If you have any questions or concerns about this privacy policy, please contact Evostackr at <a href="mailto:support@evostackr.in" style="color:var(--color-accent-cyan); text-decoration: underline;">support@evostackr.in</a>.</p>
+            <p>If you have any questions or concerns about this privacy policy, please contact Evostackr at <a href="mailto:support@evostackr.in" class="text-link">support@evostackr.in</a>.</p>
           </div>
         </div>
       </div>
@@ -678,7 +849,7 @@
             <p>My Piano is provided "as is" without warranties of any kind. While we strive for seamless compatibility across all browsers, performance may vary depending on device hardware and browser capabilities.</p>
             <br>
             <h4>4. Contact & Inquiries</h4>
-            <p>My Piano is developed and operated by <strong>Evostackr</strong>. For legal or operational inquiries, email <a href="mailto:support@evostackr.in" style="color:var(--color-accent-cyan); text-decoration: underline;">support@evostackr.in</a>.</p>
+            <p>My Piano is developed and operated by <strong>Evostackr</strong>. For legal or operational inquiries, email <a href="mailto:support@evostackr.in" class="text-link">support@evostackr.in</a>.</p>
           </div>
         </div>
       </div>
@@ -694,7 +865,7 @@
             <div style="background: #181818; border: 1px solid #333; border-radius: 8px; padding: 16px; margin-bottom: 16px; text-align: center;">
               <div style="font-size: 11px; font-weight: 700; color: #888; letter-spacing: 0.5px; margin-bottom: 6px; text-transform: uppercase;">Official Support by Evostackr</div>
               <a href="mailto:support@evostackr.in" style="font-size: 18px; font-weight: 800; color: var(--color-accent-cyan); text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
                 support@evostackr.in
               </a>
               <p style="font-size: 12px; color: #aaa; margin-top: 6px;">Feel free to email us directly for assistance, questions, or bug reports.</p>

@@ -1,32 +1,45 @@
-# Global security & permissions headers
+# Global security & performance headers for Cloudflare Pages
 /*
   X-Frame-Options: SAMEORIGIN
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
-  Permissions-Policy: autoplay=*
+  Permissions-Policy: autoplay=*, fullscreen=*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 
-# Long-term edge cache for audio samples (88 OGG notes)
+# Immutable edge caching for 88 acoustic grand piano OGG recordings
 /sounds/*
   Cache-Control: public, max-age=31536000, immutable
   Access-Control-Allow-Origin: *
+  Content-Type: audio/ogg
 
-# Long-term edge cache for images and media
+# Immutable edge caching for images and thumbnails
 /images/*
   Cache-Control: public, max-age=31536000, immutable
 
-# Long-term edge cache for hashed Vite assets
+# Favicon and PWA manifest
+/favicon.webp
+  Cache-Control: public, max-age=604800, must-revalidate
+
+/site.webmanifest
+  Cache-Control: public, max-age=86400, must-revalidate
+  Content-Type: application/manifest+json
+
+# Hashed production JS and CSS bundles
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
 
-# Revalidate HTML and SEO crawl metadata
+# HTML and crawl discovery files
 /index.html
   Cache-Control: public, max-age=0, must-revalidate
 
 /robots.txt
   Cache-Control: public, max-age=86400, must-revalidate
+  Content-Type: text/plain; charset=utf-8
 
 /sitemap.xml
   Cache-Control: public, max-age=86400, must-revalidate
+  Content-Type: application/xml; charset=utf-8
 
 /llms.txt
   Cache-Control: public, max-age=86400, must-revalidate
+  Content-Type: text/plain; charset=utf-8

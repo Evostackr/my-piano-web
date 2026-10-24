@@ -1,0 +1,26 @@
+{
+  "name": "My Piano – Play 88-Key Piano Online for Free",
+  "short_name": "My Piano",
+  "description": "Play piano online in your browser with 88 authentic grand piano notes across 7 octaves, keyboard controls, and zero latency.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#121212",
+  "theme_color": "#272727",
+  "categories": ["music", "education", "utilities", "entertainment"],
+  "icons": [
+    {
+      "src": "/favicon.webp",
+      "sizes": "192x192",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ]
+}

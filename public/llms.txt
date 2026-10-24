@@ -1,30 +1,59 @@
-# My Piano (https://mypiano.app/)
+# My Piano (https://my-piano.evostackr.in/)
 
-> My Piano is a free, interactive virtual piano web application featuring authentic 88-note acoustic grand piano recordings across 7 full octaves. It runs natively in modern web browsers without installation or plugins.
+> My Piano is a free, interactive 88-key virtual piano web application developed by Evostackr. It delivers studio-grade acoustic grand piano sounds across 7 full octaves with zero latency via the Web Audio API. It operates purely client-side without installation, plugins, or user registration.
 
-## Core Capabilities
-- **Playable Keyboard**: 49 white keys (A1 to G7) and 35 black keys (A#1 to G#7) across 7 octaves.
-- **Authentic Acoustics**: 88 individual Vorbis (.ogg) acoustic grand piano samples.
-- **Zero-Latency Polyphony**: Multi-voice chord playback using the Web Audio API.
-- **Input Methods**: Computer keyboard (QWERTY), mouse clicks/glissando, and touchscreen multi-touch.
-- **Navigator**: Mini-piano seekbar for rapid horizontal panning across the 7-octave range.
-- **Octave Selectors**: Dedicated quick-jump pills for Octaves 1 through 7, plus `[` and `]` keyboard shortcuts.
-- **Audio Controls**: Master volume adjustment, one-click mute, and fullscreen performance mode.
-- **Privacy & Security**: Operates completely in the client's browser; no user tracking, no cookies, no account required.
+## Website Overview & Canonical Details
+- **Website URL**: https://my-piano.evostackr.in/
+- **Creator / Developer**: Evostackr (https://evostackr.in/)
+- **Support Contact**: support@evostackr.in
+- **License**: MIT (Free to use, educational & recreational)
+- **Application Category**: Interactive Virtual Musical Instrument / Audio Web Application
 
-## Keyboard Controls Mapping (Middle Octave 4)
-- **White Keys**: A (C4), S (D4), D (E4), F (F4), G (G4), H (A4), J (B4), K (C5), L (D5), ; (E5), ' (F5)
-- **Black Keys**: W (C#4), E (D#4), T (F#4), Y (G#4), U (A#4), O (C#5), P (D#5)
-- **Octave Shift**: `[` shifts down one octave, `]` shifts up one octave.
+## Core Musical Capabilities & Features
+- **Total Keys**: 84 playable physical keys spanning 7 octaves (49 white keys: A1 through G7; 35 black keys: A#1 through G#7).
+- **Audio Sample Quality**: 88 individual acoustic grand piano Vorbis (.ogg) audio samples recorded from a concert grand piano.
+- **Polyphonic Audio Engine**: Full polyphony via HTML5 Web Audio API; users can strike multiple notes simultaneously, play chords, triads, arpeggios, and trills without dropped voices or audio clipping.
+- **Interactive Mini-Piano Seekbar**: Top navigation strip styled with an authentic 88-key miniature piano image (`scrollbgm.jpg`) and draggable viewport window (`thumb.jpg`), featuring real-time bidirectional synchronization with the main piano keyboard.
+- **Visual Touch Feedback**: Active keys illuminate with a vibrant cyan contact glow (`#80ffe5`) for a minimum of 100 milliseconds or for the duration of the touch/hold.
+- **Octave Navigation**: Quick-jump pills for Octaves 1 through 7, plus `[` and `]` keyboard shortcuts.
+- **Audio & Viewport Controls**: Master volume slider with instant mute toggle, fullscreen performance mode matching native mobile orientation, and keyboard shortcut badge toggles.
+- **Privacy & Performance**: 100% client-side execution; zero user tracking, zero third-party profiling cookies, and zero personal data collection.
 
-## Developer & Support
-- **Developer / Creator**: Evostackr
-- **Support Email**: support@evostackr.in
-- **Official Website**: https://evostackr.in
+## QWERTY Computer Keyboard Mapping (Middle C / Octave 4)
+- **White Keys (Natural Notes)**:
+  - C4: `A`
+  - D4: `S`
+  - E4: `D`
+  - F4: `F`
+  - G4: `G`
+  - A4: `H`
+  - B4: `J`
+  - C5: `K`
+  - D5: `L`
+  - E5: `;`
+  - F5: `'`
+- **Black Keys (Accidentals / Sharps)**:
+  - C#4: `W`
+  - D#4: `E`
+  - F#4: `T`
+  - G#4: `Y`
+  - A#4: `U`
+  - C#5: `O`
+  - D#5: `P`
+- **Octave Shifting**:
+  - Shift one octave down: `[` (or Alt + Left Arrow)
+  - Shift one octave up: `]` (or Alt + Right Arrow)
 
-## Frequently Asked Questions
-- **Is My Piano free?** Yes, 100% free with no registration, subscriptions, or paywalls.
-- **Does it work on mobile?** Yes, it supports multi-touch on iOS and Android devices.
-- **Does it require installation?** No, it runs entirely in any modern web browser.
-- **Who developed My Piano?** My Piano is developed and maintained by Evostackr (support@evostackr.in).
+## Step-by-Step Playing Guide (HowTo)
+1. **Initialize Sound**: Click or tap any key on the piano to start the browser Web Audio context.
+2. **Play Notes**: Strike keys using a mouse click, touchscreen tap, or computer keyboard keys (A-J home row).
+3. **Play Chords**: Press multiple computer keys simultaneously or use multi-finger touch on tablets and smartphones.
+4. **Navigate Octaves**: Click the Octave pills (Octave 1 to 7) or drag the mini-piano seekbar at the top to explore the full 7-octave acoustic range.
+5. **Adjust Volume**: Use the slider in the top header or toggle fullscreen mode for an immersive performance.
 
+## Verified Frequently Asked Questions (FAQ)
+- **Is My Piano completely free?** Yes, it is 100% free with no registration, subscriptions, fees, or paywalls.
+- **Can I play piano using my computer keyboard?** Yes, desktop keyboard mapping is enabled by default on the home row (A-J for white keys, W-U for black keys).
+- **Does it work on mobile phones and tablets?** Yes, it is fully responsive on iOS (Safari) and Android (Chrome) with multi-touch glissando and chord capabilities.
+- **How do I find Middle C?** Middle C is labeled C4 on the piano keyboard, located in Octave 4 directly to the left of the two-black-key cluster.
+- **Who built My Piano?** My Piano was created and is actively maintained by Evostackr. Support email: support@evostackr.in.

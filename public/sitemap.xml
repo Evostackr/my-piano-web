@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://mypiano.app/</loc>
+    <loc>https://my-piano.evostackr.in/</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://my-piano.evostackr.in/images/scrollbgm.jpg</image:loc>
+      <image:title>My Piano 88-Key Interactive Virtual Piano Keyboard</image:title>
+      <image:caption>Full 88-key acoustic grand piano navigation strip and virtual keyboard</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://my-piano.evostackr.in/favicon.webp</image:loc>
+      <image:title>My Piano Emblem and Logo</image:title>
+      <image:caption>Official logo for My Piano by Evostackr</image:caption>
+    </image:image>
   </url>
 </urlset>

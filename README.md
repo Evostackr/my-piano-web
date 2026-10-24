@@ -1,8 +1,10 @@
 # My Piano – Free Online 88-Key Virtual Piano
 
+> **Live Website**: [https://my-piano.evostackr.in/](https://my-piano.evostackr.in/)
+
 ![My Piano Banner](/images/scrollbgm.jpg)
 
-A high-performance, responsive virtual piano web application featuring authentic acoustic grand piano recordings across 7 full octaves (84 active keys). Built with modern HTML5, Vanilla CSS, and TypeScript powered by the Web Audio API for zero-latency polyphonic playback.
+A high-performance, responsive virtual piano web application featuring authentic acoustic grand piano recordings across 7 full octaves (84 active keys). Developed by **Evostackr**, built with modern HTML5, Vanilla CSS, and TypeScript powered by the Web Audio API for zero-latency polyphonic playback.
 
 ---
 

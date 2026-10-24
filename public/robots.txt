@@ -1,4 +1,70 @@
+# Robots.txt for My Piano (https://my-piano.evostackr.in/)
+# Optimized for Search Engines (Google, Bing), Answer Engines (AEO), and AI Models (GEO)
+
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /private/
 
-Sitemap: https://mypiano.app/sitemap.xml
+# Explicit permissions for Search Engine Crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Explicit permissions for AI & Answer Engine Crawlers (AEO / GEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+# Host & Sitemap specification
+Host: https://my-piano.evostackr.in
+Sitemap: https://my-piano.evostackr.in/sitemap.xml
