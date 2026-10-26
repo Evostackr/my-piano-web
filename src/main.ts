@@ -31,13 +31,7 @@ const desktopNavLinks = document.querySelectorAll<HTMLAnchorElement>('.site-nav 
 const helpModal = document.getElementById('helpModal') as HTMLElement;
 const closeModalBtn = document.getElementById('closeModalBtn') as HTMLButtonElement;
 
-const privacyModal = document.getElementById('privacyModal') as HTMLElement | null;
-const openPrivacyBtn = document.getElementById('openPrivacyBtn') as HTMLButtonElement | null;
-const closePrivacyBtn = document.getElementById('closePrivacyBtn') as HTMLButtonElement | null;
 
-const termsModal = document.getElementById('termsModal') as HTMLElement | null;
-const openTermsBtn = document.getElementById('openTermsBtn') as HTMLButtonElement | null;
-const closeTermsBtn = document.getElementById('closeTermsBtn') as HTMLButtonElement | null;
 
 const contactModal = document.getElementById('contactModal') as HTMLElement | null;
 const openContactBtn = document.getElementById('openContactBtn') as HTMLButtonElement | null;
@@ -534,23 +528,7 @@ function initWebsiteInfrastructure() {
     copyrightYear.textContent = String(new Date().getFullYear());
   }
 
-  // 4. Privacy Policy Modal
-  if (openPrivacyBtn && privacyModal && closePrivacyBtn) {
-    openPrivacyBtn.addEventListener('click', () => privacyModal.classList.add('open'));
-    closePrivacyBtn.addEventListener('click', () => privacyModal.classList.remove('open'));
-    privacyModal.addEventListener('click', (e) => {
-      if (e.target === privacyModal) privacyModal.classList.remove('open');
-    });
-  }
 
-  // 5. Terms of Use Modal
-  if (openTermsBtn && termsModal && closeTermsBtn) {
-    openTermsBtn.addEventListener('click', () => termsModal.classList.add('open'));
-    closeTermsBtn.addEventListener('click', () => termsModal.classList.remove('open'));
-    termsModal.addEventListener('click', (e) => {
-      if (e.target === termsModal) termsModal.classList.remove('open');
-    });
-  }
 
   // 6. Contact Modal
   if (openContactBtn && contactModal && closeContactBtn) {

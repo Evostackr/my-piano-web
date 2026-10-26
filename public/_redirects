@@ -1,2 +1,6 @@
-# Cloudflare Pages SPA Routing
+# Cloudflare Pages Routing
+/privacy-policy /privacy-policy.html 200
+/terms-of-use /terms-of-use.html 200
+/terms /terms-of-use.html 200
 /* /index.html 200
+

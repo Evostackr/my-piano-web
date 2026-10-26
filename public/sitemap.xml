@@ -17,4 +17,17 @@
       <image:caption>Official logo for My Piano by Evostackr</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://my-piano.evostackr.in/privacy-policy.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://my-piano.evostackr.in/terms-of-use.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
 </urlset>
+
