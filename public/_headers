@@ -5,6 +5,7 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: autoplay=*, fullscreen=*
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://5gvci.com https://3nbf4.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; media-src 'self' blob: data:; connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com https://5gvci.com https://3nbf4.com https://*.cloudflare.com; worker-src 'self' blob: https://3nbf4.com; frame-ancestors 'self'; base-uri 'self'; object-src 'none';
 
 # Immutable edge caching for 88 acoustic grand piano OGG recordings
 /sounds/*

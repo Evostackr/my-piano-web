@@ -39,6 +39,19 @@ const closeContactBtn = document.getElementById('closeContactBtn') as HTMLButton
 
 const copyrightYear = document.getElementById('copyrightYear') as HTMLElement | null;
 
+// Modal accessibility helpers
+function openModal(modal: HTMLElement) {
+  modal.classList.add('open');
+  modal.removeAttribute('inert');
+  modal.setAttribute('aria-hidden', 'false');
+}
+
+function closeModal(modal: HTMLElement) {
+  modal.classList.remove('open');
+  modal.setAttribute('inert', '');
+  modal.setAttribute('aria-hidden', 'true');
+}
+
 // State
 let currentKeyboardOctave = 4;
 let showKeyShortcuts = false;
@@ -447,19 +460,23 @@ function initToolbar() {
     });
   });
 
+  // Ensure modals start in accessible inert state
+  if (helpModal) closeModal(helpModal);
+  if (contactModal) closeModal(contactModal);
+
   // Help Modal
   helpBtn.addEventListener('click', () => {
-    helpModal.classList.add('open');
+    openModal(helpModal);
     engagementBus.recordHelpViewed();
   });
 
   closeModalBtn.addEventListener('click', () => {
-    helpModal.classList.remove('open');
+    closeModal(helpModal);
   });
 
   helpModal.addEventListener('click', (e) => {
     if (e.target === helpModal) {
-      helpModal.classList.remove('open');
+      closeModal(helpModal);
     }
   });
 }
@@ -483,6 +500,11 @@ function initWebsiteInfrastructure() {
       mobileMenuToggle.classList.toggle('open', isOpen);
       mobileMenuToggle.setAttribute('aria-expanded', String(isOpen));
       mobileNavDrawer.setAttribute('aria-hidden', String(!isOpen));
+      if (isOpen) {
+        mobileNavDrawer.removeAttribute('inert');
+      } else {
+        mobileNavDrawer.setAttribute('inert', '');
+      }
     });
 
     mobileNavLinks.forEach(link => {
@@ -491,6 +513,7 @@ function initWebsiteInfrastructure() {
         mobileMenuToggle.classList.remove('open');
         mobileMenuToggle.setAttribute('aria-expanded', 'false');
         mobileNavDrawer.setAttribute('aria-hidden', 'true');
+        mobileNavDrawer.setAttribute('inert', '');
       });
     });
   }
@@ -533,12 +556,12 @@ function initWebsiteInfrastructure() {
   // 6. Contact Modal
   if (openContactBtn && contactModal && closeContactBtn) {
     openContactBtn.addEventListener('click', () => {
-      contactModal.classList.add('open');
+      openModal(contactModal);
       engagementBus.recordContactClick();
     });
-    closeContactBtn.addEventListener('click', () => contactModal.classList.remove('open'));
+    closeContactBtn.addEventListener('click', () => closeModal(contactModal));
     contactModal.addEventListener('click', (e) => {
-      if (e.target === contactModal) contactModal.classList.remove('open');
+      if (e.target === contactModal) closeModal(contactModal);
     });
   }
 
@@ -552,25 +575,41 @@ function initWebsiteInfrastructure() {
   // Escape key closes any open modal
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-      document.querySelectorAll('.modal-overlay.open').forEach(modal => modal.classList.remove('open'));
+      document.querySelectorAll('.modal-overlay.open').forEach(modal => closeModal(modal as HTMLElement));
       if (mobileNavDrawer && mobileMenuToggle) {
         mobileNavDrawer.classList.remove('open');
         mobileMenuToggle.classList.remove('open');
+        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+        mobileNavDrawer.setAttribute('aria-hidden', 'true');
+        mobileNavDrawer.setAttribute('inert', '');
       }
     }
   });
 }
 
 /**
- * Preload commonly used notes for zero-latency initial play
+ * Preload core audio notes for zero-latency initial play, deferring extended octaves
  */
 function preloadCoreAudio() {
-  const commonNotes = [
-    'c3', 'd3', 'e3', 'f3', 'g3', 'a3', 'b3',
-    'c4', 'c44', 'd4', 'd44', 'e4', 'f4', 'f44', 'g4', 'g44', 'a4', 'a44', 'b4',
-    'c5', 'c55', 'd5', 'd55', 'e5', 'f5', 'f55', 'g5', 'g55', 'a5', 'a55', 'b5'
-  ];
-  audioEngine.preloadNotes(commonNotes);
+  // Preload primary active octave (Octave 4) immediately for instant zero-latency start
+  const coreNotes = ['c4', 'd4', 'e4', 'f4', 'g4', 'a4', 'b4', 'c5'];
+  audioEngine.preloadNotes(coreNotes);
+
+  // Defer extended octaves until main thread is idle to optimize page load transfer size
+  const deferPreload = () => {
+    const extendedNotes = [
+      'c44', 'd44', 'f44', 'g44', 'a44',
+      'c3', 'd3', 'e3', 'f3', 'g3', 'a3', 'b3',
+      'c55', 'd55', 'e5', 'f5', 'f55', 'g5', 'g55', 'a5', 'a55', 'b5'
+    ];
+    audioEngine.preloadNotes(extendedNotes);
+  };
+
+  if ('requestIdleCallback' in window) {
+    (window as unknown as { requestIdleCallback: (cb: () => void, opts?: { timeout: number }) => void }).requestIdleCallback(deferPreload, { timeout: 3000 });
+  } else {
+    setTimeout(deferPreload, 2000);
+  }
 }
 
 /**
